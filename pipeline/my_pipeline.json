@@ -1,1 +1,23 @@
-pipeline
+{
+  "components": [
+    {
+      "name": "component1",
+      "component": {
+        "name": "component1",
+        "executor_label": "cpu",
+        "container": {
+          "image": "gcr.io/kubeflow-org/kubeflow-pipelines:1.2.0",
+          "command": ["python3", "-m", "kfp.dsl.component._main"],
+          "args": ["--component_func", "component1"]
+        }
+      }
+    },
+    // ... other components
+  ],
+  "connections": [
+    // ... connections between components
+  ],
+  "metadata": {
+    "name": "My Pipeline"
+  }
+}
