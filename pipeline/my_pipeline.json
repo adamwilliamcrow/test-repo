@@ -12,10 +12,26 @@
         }
       }
     },
-    // ... other components
+    {
+      "name": "component2",
+      "component": {
+        "name": "component2",
+        "executor_label": "cpu",
+        "container": {
+          "image": "gcr.io/kubeflow-org/kubeflow-pipelines:1.2.0",
+          "command": ["python3", "-m", "kfp.dsl.component._main"],
+          "args": ["--component_func", "component2"]
+        }
+      }
+    }
   ],
   "connections": [
-    // ... connections between components
+    {
+      "source_task": "component1",
+      "source_output": "output1",
+      "destination_task": "component2",
+      "destination_input": "input1"
+    }
   ],
   "metadata": {
     "name": "My Pipeline"
