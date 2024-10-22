@@ -36,9 +36,10 @@
   "metadata": {
     "name": "mypipeline"
   },
+  "runtimeConfig": {
+    "gcsServiceAccount": "foo@bar.gserviceaccount.com"
+  },
   "pipelineSpec": {
     "root": "component1" 
-  },
-  "runtimeConfig": {
   }
 }
