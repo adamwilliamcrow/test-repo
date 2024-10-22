@@ -37,6 +37,6 @@
     "name": "mypipeline"
   },
   "pipelineSpec": {
-    "root": "component1" // Replace with actual name
+    "root": "component1" 
   }
 }
