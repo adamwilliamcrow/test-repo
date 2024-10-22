@@ -38,5 +38,7 @@
   },
   "pipelineSpec": {
     "root": "component1" 
-  }
+  },
+  "runtimeConfig": {
+  },
 }
